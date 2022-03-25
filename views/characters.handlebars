@@ -1,0 +1,17 @@
+<main class="main main-monsters container text-center">
+    <h2>All the Monsters!</h2>
+    <section class="section mon-section row">
+    {{#each data}}
+    <div class="col-md-4">
+        <figure class="mon-fig">
+            <figcaption class="mon-fig-cap">
+                <a href="/characters/{{id}}">
+                <img src="{{image}}" alt="placeholder image">
+                <h2>{{name}}</h2>
+                </a>
+            </figcaption>
+        </figure>
+    </div>
+    {{/each}}
+    </section>
+</main>

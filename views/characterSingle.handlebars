@@ -1,0 +1,48 @@
+<main class="main mon-single-main container">
+    <section class="section sing-mon-section">
+        <div class="row">
+            <div class="col-md-6">
+                <figure>
+                    <img src="{{data.image}}" alt="placeholder image">
+                    <figcaption class='figcap'>{{name}}</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <aside class="aside">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="aside-h3">Physical Characteristics</h3>
+                            <ul class="affiliations-ul list-group">
+                                {{#each @../physicalDescription}}
+                                <li class="enemies-li list-group-item single-li">
+                                    {{@key}}: {{this}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="aside-h3">Allies</h3>
+                            <ul class="affiliations-ul list-group">
+                                {{#each @../personalInformation/allies}}
+                                <li class="enemies-li list-group-item single-li">
+                                    {{this}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="aside-h3">enemies</h3>
+                            <ul class="affiliations-ul list-group">
+                                {{#each @../personalInformation/enemies}}
+                                <li class="enemies-li list-group-item single-li">
+                                    {{this}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
